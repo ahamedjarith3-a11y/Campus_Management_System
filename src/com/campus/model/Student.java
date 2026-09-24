@@ -1,6 +1,6 @@
 package com.campus.model;
 
-public class student {
+public class Student {
     //Encapsulation - Data Hiding
     // instance variables are declared as private to restrict direct access from outside the class
     private int studentId;
@@ -10,16 +10,16 @@ public class student {
     private int[] marks;
 
     //static variable to keep track of the number of student objects created
-    private int studentCount = 0;
+    private static int studentCount = 0;
 
     //default constructor
-    public student() {
+    public Student() {
         studentCount++;
     }
 
 
     //parameterized constructor
-    public student(int studentId, String studentName, int age, String department, int[] marks) {
+    public Student(int studentId, String studentName, int age, String department, int[] marks) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.age = age;
@@ -71,9 +71,10 @@ public class student {
         if(showMarks){
             System.out.println("Marks: " + java.util.Arrays.toString(marks));
         }
-        //static method belong to the class rather than an instance of the class
-        public static void displayStudentCount(){
-            System.out.println("Total number of students: " + studentCount);
-        }
+    }
+
+    //static method belong to the class rather than an instance of the class
+    public static void displayStudentCount(){
+        System.out.println("Total number of students: " + studentCount);
     }
 }

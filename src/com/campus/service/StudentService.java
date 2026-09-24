@@ -1,7 +1,7 @@
 package com.campus.service;
-import com.campus.model.student;
+import com.campus.model.Student;
 
-public class studentservice {
+public class StudentService {
     //calculate total marks
     public int calculateTotal(Student student) {
         int[] marks = student.getMarks();
@@ -56,8 +56,7 @@ public class studentservice {
         if(marks == null || marks.length == 0){
             return 'F';
         }
-        int total = calculateTotal(student);
-        int average = calculateAverage(student);
+        double average = calculateAverage(student);
         if(average >= 90){
             return 'A';
         } else if(average >= 80){
@@ -68,7 +67,7 @@ public class studentservice {
             return 'D';
         }else if(average >= 50){
             return 'E';
-        }r else {
+        } else {
             return 'F';
         }
     }
@@ -78,7 +77,7 @@ public class studentservice {
         if(marks == null || marks.length == 0){
             return "Fail";
         }
-        int average = calculateAverage(student);
+        double average = calculateAverage(student);
         if(average >= 50){
             return "Pass";
         } else {
