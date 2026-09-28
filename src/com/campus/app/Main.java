@@ -28,6 +28,7 @@ public class Main {
             Student.displayStudentCount();
             StudentService studentService = new StudentService();
             studentService.displayReportCard(student);
+            sc.close();
         }
     }
 }

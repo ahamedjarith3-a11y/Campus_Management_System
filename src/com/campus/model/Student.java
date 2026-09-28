@@ -72,7 +72,11 @@ public class Student {
             System.out.println("Marks: " + java.util.Arrays.toString(marks));
         }
     }
+    // abstract class
+    public void studentType() {
+    }
 
+    
     //static method belong to the class rather than an instance of the class
     public static void displayStudentCount(){
         System.out.println("Total number of students: " + studentCount);
