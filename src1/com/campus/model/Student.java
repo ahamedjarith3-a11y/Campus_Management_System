@@ -1,6 +1,6 @@
 package com.campus.model;
-
-public class Student {
+import com.campus.contract.StudentOperations;
+public class Student implements StudentOperations {
     //Encapsulation - Data Hiding
     // instance variables are declared as private to restrict direct access from outside the class
     private int studentId;
@@ -76,9 +76,19 @@ public class Student {
     public void studentType() {
     }
 
-    
+
     //static method belong to the class rather than an instance of the class
     public static void displayStudentCount(){
         System.out.println("Total number of students: " + studentCount);
     }
+    
+
+    public void eligbleForScholarship() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'eligibleForScholarship'");
+    }
+    public void generatereport() {
+        System.out.println("Student Report Card");
+    }
+
 }
