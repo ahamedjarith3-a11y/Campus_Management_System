@@ -17,22 +17,6 @@ public class StudentServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws IOException {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<html>");
-        out.println("<head><title>List of Students</title></head>");
-        out.println("<body>");
-
-        out.println("<h1>All Students</h1>");
-        out.println("<ul>");
-        for (String student : studentService.getStudents()) {
-            out.println("<li>" + student + "</li>");
-        }
-        out.println("</ul>");
-        out.print("<a href=\"/student.html\">Add Student</a>");
-        out.println("</body>");
-        out.println("</html>");
     }
 
     @Override
