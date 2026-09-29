@@ -1,12 +1,13 @@
 package com.campus.controller;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import com.campus.services.StudentService;
 
 @WebServlet("/students")
@@ -16,7 +17,11 @@ public class StudentServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
-            throws IOException {
+            throws IOException, ServletException {
+                 var students = studentService.getStudents();
+        request.setAttribute("students", students);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/students.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override

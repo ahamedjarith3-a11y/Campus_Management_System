@@ -84,7 +84,6 @@ public class Student implements StudentOperations {
     
 
     public void eligbleForScholarship() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'eligibleForScholarship'");
     }
     public void generatereport() {
